@@ -1,16 +1,51 @@
-# React + Vite
+# ✅ TaskFlow – Gestión de Tareas
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+TaskFlow es una aplicación web desarrollada en **React.js** que permite gestionar tareas de forma simple e intuitiva, aplicando conceptos de **Programación Orientada a Objetos (POO)** y una arquitectura basada en componentes.
 
-Currently, two official plugins are available:
+Este proyecto fue creado como parte de un **módulo ABP**, enfocándose en la correcta estructuración del código, separación de responsabilidades y manejo del estado.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## 🎯 Objetivo del Proyecto
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Aplicar Programación Orientada a Objetos en JavaScript
+- Crear y administrar tareas
+- Cambiar el estado de una tarea
+- Eliminar tareas
+- Integrar lógica POO con una interfaz React
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🧠 Conceptos Aplicados
+
+- Programación Orientada a Objetos (Clases, métodos, propiedades)
+- Componentes en React
+- Manejo de estado (`useState`)
+- Separación de lógica y UI
+- Arquitectura modular
+
+---
+
+## 🛠️ Tecnologías Utilizadas
+
+- React.js
+- JavaScript (ES6+)
+- Vite
+- HTML5
+- CSS básico
+
+---
+
+## 📁 Estructura del Proyecto
+
+```bash
+src/
+├── models/
+│   ├── Tarea.js
+│   └── GestorTareas.js
+├── components/
+│   ├── TaskForm.jsx
+│   ├── TaskList.jsx
+│   └── TaskItem.jsx
+├── App.jsx
+└── main.jsx
