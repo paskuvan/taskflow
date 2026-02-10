@@ -1,35 +1,44 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState, useEffect } from "react";
+import { GestorTareas } from "./models/GestorTareas";
+import TaskForm from "./components/TaskForm";
+import TaskList from "./components/TaskList";
+
+const gestor = new GestorTareas();
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [, setRender] = useState(false);
+  const [dark, setDark] = useState(() =>
+    localStorage.getItem("theme") === "dark" ||
+    (!localStorage.getItem("theme") && window.matchMedia("(prefers-color-scheme: dark)").matches)
+  );
+
+  useEffect(() => {
+    document.documentElement.classList.toggle("dark", dark);
+    localStorage.setItem("theme", dark ? "dark" : "light");
+  }, [dark]);
+
+  const actualizar = () => setRender(r => !r);
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <div className="min-h-screen bg-gray-100 dark:bg-gray-900 transition-colors duration-300">
+      <div className="max-w-xl mx-auto px-4 py-10">
+        <div className="flex items-center justify-between mb-8">
+          <h1 className="text-2xl font-bold text-gray-800 dark:text-gray-100">
+            TaskFlow - Gestión de Tareas
+          </h1>
+          <button
+            onClick={() => setDark(d => !d)}
+            className="p-2 rounded-lg bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-200 hover:bg-gray-300 dark:hover:bg-gray-600 transition"
+            aria-label="Toggle dark mode"
+          >
+            {dark ? "☀️" : "🌙"}
+          </button>
+        </div>
+        <TaskForm gestor={gestor} actualizar={actualizar} />
+        <TaskList gestor={gestor} actualizar={actualizar} />
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    </div>
+  );
 }
 
-export default App
+export default App;
