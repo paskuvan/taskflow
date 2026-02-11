@@ -1,51 +1,52 @@
 # ✅ TaskFlow – Gestión de Tareas
 
-TaskFlow es una aplicación web desarrollada en **React.js** que permite gestionar tareas de forma simple e intuitiva, aplicando conceptos de **Programación Orientada a Objetos (POO)** y una arquitectura basada en componentes.
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![JavaScript ES6](https://img.shields.io/badge/JavaScript-ES6-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![React](https://img.shields.io/badge/React-18-61DAFB?style=for-the-badge&logo=react&logoColor=black)
+![Vite](https://img.shields.io/badge/Vite-5-646CFF?style=for-the-badge&logo=vite&logoColor=white)
 
-Este proyecto fue creado como parte de un **módulo ABP**, enfocándose en la correcta estructuración del código, separación de responsabilidades y manejo del estado.
+TaskFlow es una aplicación web desarrollada en **React.js** que permite gestionar tareas de manera simple e intuitiva, aplicando conceptos de **Programación Orientada a Objetos (POO)** y arquitectura basada en componentes.
+
+Este proyecto fue desarrollado como parte de un módulo ABP, enfocándose en la correcta estructuración del código y separación entre lógica y presentación.
 
 ---
 
 ## 🎯 Objetivo del Proyecto
 
 - Aplicar Programación Orientada a Objetos en JavaScript
-- Crear y administrar tareas
-- Cambiar el estado de una tarea
-- Eliminar tareas
-- Integrar lógica POO con una interfaz React
+- Implementar clases `Tarea` y `GestorTareas`
+- Gestionar tareas dinámicamente
+- Integrar lógica POO con interfaz React
 
 ---
 
 ## 🧠 Conceptos Aplicados
 
-- Programación Orientada a Objetos (Clases, métodos, propiedades)
-- Componentes en React
-- Manejo de estado (`useState`)
-- Separación de lógica y UI
+- Clases y métodos en ES6
+- Componentes funcionales en React
+- Manejo de estado con `useState`
+- Separación de responsabilidades
 - Arquitectura modular
 
 ---
 
 ## 🛠️ Tecnologías Utilizadas
 
-- React.js
-- JavaScript (ES6+)
-- Vite
 - HTML5
-- CSS básico
+- CSS3
+- JavaScript ES6
+- React 18
+- Vite
 
 ---
 
-## 📁 Estructura del Proyecto
+## ▶️ Instalación
 
 ```bash
-src/
-├── models/
-│   ├── Tarea.js
-│   └── GestorTareas.js
-├── components/
-│   ├── TaskForm.jsx
-│   ├── TaskList.jsx
-│   └── TaskItem.jsx
-├── App.jsx
-└── main.jsx
+git clone https://github.com/paskuvan/taskflow.git
+cd taskflow
+npm install
+npm run dev
+
+
